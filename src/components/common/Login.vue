@@ -3,7 +3,7 @@
     <div class="login_box">
       <!-- 头像区域 -->
       <div class="avatar_box">
-        <img src="~assets/logo.png" alt />
+        <img src="~assets/img/logo.png" alt />
       </div>
       <!-- 登录表单区域 -->
       <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="0px" class="login_form">
@@ -57,7 +57,6 @@ export default {
       this.$refs.loginFormRef.validate(async valid => {
         if(!valid) return;
         const {data: res} = await this.$http.post("login", this.loginForm)
-        console.log(res);
         if(res.meta.status !== 200) return this.$message.error({message: '登录失败',offset: 150});
         this.$message.success({message: '登录成功',offset: 150});  
 

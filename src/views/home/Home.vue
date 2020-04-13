@@ -1,19 +1,19 @@
 <template>
-  <el-button type="info" @click="logout">退出</el-button>
+    <Container></Container>
 </template>
 
 <script>
+import Container from './childcomps/Container'
+
 export default {
   name: "Home",
   data() {
     return {};
   },
-  components: {},
+  components: {
+    Container
+  },
   methods: {
-    logout() {
-      window.sessionStorage.clear();
-      this.$router.push("/login");
-    }
   }
 };
 </script>
