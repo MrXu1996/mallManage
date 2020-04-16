@@ -6,8 +6,10 @@ import Welcome from 'views/home/childcomps/Welcome'
 import Users from 'components/content/user/Users'
 import Rights from 'components/content/power/Rights'
 import Roles from 'components/content/power/Roles'
+import List from 'components/content/goods/List'
 import Categories from 'components/content/goods/Categories'
 import Params from 'components/content/goods/Params'
+import AddGoods from 'components/content/goods/AddGoods'
 
 Vue.use(Router)
 
@@ -47,6 +49,13 @@ const router = new Router({
                 {
                     path: '/params',
                     component: Params
+                }, {
+                    path: '/goods',
+                    component: List
+                },
+                {
+                    path: '/goods/add',
+                    component: AddGoods
                 }
             ]
         }

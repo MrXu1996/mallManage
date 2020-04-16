@@ -235,6 +235,7 @@ export default {
     parentCateChanged() {
       if (this.selectedKeys.length !== 3) {
         this.selectedKeys = [];
+        this.$message.error('请选择三级分类!')
         this.manyTableData = []
         this.onlyTableData = []
         return;
