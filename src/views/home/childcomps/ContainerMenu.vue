@@ -22,7 +22,7 @@
         </template>
 
         <!-- 二级菜单 -->
-        <el-menu-item :index="subItem.path " @click="saveNavState(subItem.path)" v-for="subItem in item.children" :key="subItem.id">
+        <el-menu-item :index=" '/' + subItem.path" @click="saveNavState(subItem.path)" v-for="subItem in item.children" :key="subItem.id">
           <i class="el-icon-menu"></i>
           <!-- 文本 -->
           <span>{{subItem.authName}}</span>
